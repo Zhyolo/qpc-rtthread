@@ -21,7 +21,7 @@ src     = Split("""
 if GetDepend(['QPC_USING_BLINKY_EXAMPLE']):
     src += Glob('examples/rt-thread/blinky/blinky.c')
 
-path = [cwd + "/ports", cwd + "/include", cwd + "/src"]
+path = [cwd + "/ports/rt-thread", cwd + "/include", cwd + "/src"]
 
 group = DefineGroup('qpc', src, depend = ['RT_USING_MAILBOX', 'PKG_USING_QPC'], CPPPATH = path)
 
